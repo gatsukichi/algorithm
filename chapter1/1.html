@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(a, b, c){
+                let answer;
+                if(a<b){
+                   answer = a;
+                }else{
+                    answer = b;
+                }
+                if(c<answer){
+                    answer = c;
+                }
+                // 아무생각없이 풀었을때는 if문의 개수가 많아지거나, 2중 if문이되거나 했었다.
+                // 이렇게 문제를 분리해서 생각하니 훨씬 간결한 코드가 되었다.
+                return answer;
+            }
+
+            console.log(solution(2, 5, 1));
+        </script>
+    </body>
+</html>
