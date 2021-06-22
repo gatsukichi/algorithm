@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(a, b, c){
+                let answer="YES", max;
+                let sum = a+b+c;
+                //삼각형 조건이 임의의 두변의 제곱이, 항상 남은변의 제곱보다 커야 되는거아니였나? 반대였나 ?
+                // 가장긴 막대가 나머지 두변의 합보다 작아야한다.
+                if(a>b){
+                    max = a;
+                }else{
+                    max = b;
+                }
+                if(c>max){
+                    max = c;
+                }
+                if((sum-max)<=max){ // 같아도 안됌 : 평행
+                    answer = "NO"
+                }
+                // 가장큰수 찾는 로직
+
+                return answer;
+            }
+
+            console.log(solution(6, 7, 11));
+            console.log(solution(13, 33, 17));
+        </script>
+    </body>
+</html>
