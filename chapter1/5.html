@@ -7,12 +7,15 @@
         <script>
             function solution(arr){         
                 let answer, min=Number.MAX_SAFE_INTEGER;
-                for(let num of arr){
-                    if(num<min){
-                        min =num;
-                    }
-                    answer=min
-                }
+                // for(let num of arr){
+                //     if(num<min){
+                //         min =num;
+                //     }
+                //     answer=min
+                // }
+                // 내장함수로 구하기
+                answer = Math.min(...arr)
+                answer = Math.min.apply(null,arr)
                 return answer;
             }
 
